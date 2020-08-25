@@ -1,0 +1,16 @@
+{
+  "short_name": "PWA",
+  "name": "PWA",
+  "icons": [
+    {
+      "src": "/jw/images/logo_512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/jw/web/userview/PWA/v/_/index",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/jw/web/userview/PWA/v/",
+  "theme_color": "#3F51B5"
+}

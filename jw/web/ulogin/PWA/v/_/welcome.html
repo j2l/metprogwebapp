@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="theme-color" content="#3F51B5" />
+<link rel="apple-touch-icon" href="/jw/images/logo_512x512.png">
+<link rel="manifest" href="/jw/web/userview/PWA/v/manifest">
+<title>PWA&nbsp;&gt;&nbsp;Welcome</title>
+<script type="text/javascript" src="/jw/wro/common.preload.js?build=cd62bb4"></script>
+<script type="text/javascript" src="/jw/wro/common.js?build=cd62bb4" defer></script>
+<script>loadCSS("/jw/wro/common.css")</script>
+<script type="text/javascript">
+$(document).ready(function() {
+            window.setInterval("keepMeAlive('image_alive')", 200000);
+        });
+        function keepMeAlive(imgName) {  
+             myImg = document.getElementById(imgName);   
+             if (myImg) {
+                 myImg.src = myImg.src.replace(/\?.*$/, '?' + Math.random());   
+             } else { 
+                 $('body').append('<img id="image_alive" style="display:none;" width="1" height="1" src="/jw/images/v3/cj.gif?" alt="">');
+             } 
+        }  if ($.browser.msie) {
+            $(document).on("keydown", function (e) {
+                if (e.which === 8 && !$(e.target).is("input:not([readonly]), textarea:not([readonly])")) {
+                    e.preventDefault();
+                }
+            });
+        }
+function userviewPrint(){
+            $('head').append('<link id="userview_print_css" rel="stylesheet" href="/jw/wro/userview_print.min.css" type="text/css" media="print"/>');
+            setTimeout("do_print()", 1000); 
+        }
+        function do_print(){
+            window.print();
+            $('#userview_print_css').remove();
+        }
+UI.base = "/jw";
+        UI.userview_app_id = 'PWA';
+        UI.userview_id = 'v';
+        UI.locale = 'en_US';
+</script>
+<script>
+        ConnectionManager.tokenName = "OWASP_CSRFTOKEN";
+        ConnectionManager.tokenValue = "BMVY-MN6O-UUMZ-73MN-6V4I-1UJK-565Z-18MU";
+        JPopup.tokenName = "OWASP_CSRFTOKEN";
+        JPopup.tokenValue = "BMVY-MN6O-UUMZ-73MN-6V4I-1UJK-565Z-18MU";
+    </script>
+<link href="/jw/wro/progressive.preload.min.css" rel="stylesheet" />
+<link rel="preload" href="/jw/js/fontawesome5/fonts/fontawesome-webfont.woff2?v=4.6.1" as="font" crossorigin />
+<link rel="preload" href="/jw/js/fontawesome5/webfonts/fa-brands-400.woff2" as="font" crossorigin />
+<link rel="preload" href="/jw/js/fontawesome5/webfonts/fa-solid-900.woff2" as="font" crossorigin />
+<link rel="preload" href="/jw/universal/lib/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0" as="font" crossorigin />
+<script>loadCSS("/jw/wro/progressive.min.css")</script>
+<style>body:not(.popupBody) {
+  color: #212121;
+  background-color: #fff;
+}
+body.embeded {
+  background-color: transparent;
+}
+header.navbar {
+  background-color: #3f51b5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+header.navbar .header-nav {
+  background-color: #3f51b5;
+}
+main .reset_position,
+main .grid-stack-item-header-action,
+a {
+  color: #2196f3;
+}
+.dataList table a {
+  color: #0d8aee;
+}
+.dataList table a:hover,
+a:focus,
+a:hover {
+  color: #51adf6;
+}
+header.navbar a {
+  color: #ffffff;
+}
+#header-name a {
+  padding: 7px 10px;
+  color: #ffffff;
+}
+.hi-trigger:before {
+  background: #3f51b5;
+}
+.line-wrap .line {
+  background-color: #ffffff;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover,
+header.navbar .header-nav .nav > li > a.btn:focus,
+header.navbar .header-nav .nav > li > a.btn:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #D8DADA;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+header.navbar .header-nav .nav > li > a .badge {
+  background: #C13228;
+}
+header.navbar .dropdown-menu a {
+  color: #000;
+}
+header.navbar .dropdown-menu .dropdown-menu-sub-footer {
+  color: #828282;
+}
+header.navbar .dropdown-menu a span.message,
+header.navbar .dropdown-menu a span.time {
+  color: #4C4C4C;
+}
+li.dropdown-menu-title {
+  border-bottom: 1px solid #F0F0F0;
+  color: #4C4C4C;
+}
+#sidebar {
+  background: #f2f3fa;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+#page > footer {
+  color: rgba(0, 0, 0, 0.65);
+}
+@media (max-width: 1279px) {
+  #sidebar {
+    box-shadow: 0 0px 10px #0e1215;
+  }
+}
+body#login #main > div {
+  background: transparent;
+}
+.breadcrumb,
+.breadcrumb a {
+  color: #727272;
+}
+.breadcrumb a:last-child {
+  color: #51adf6;
+}
+body.horizontal_menu #sidebar a,
+#sidebar li ul li.active a,
+#sidebar li ul li.active a,
+#sidebar li ul a:focus,
+#sidebar li ul a:hover,
+.main-menu.nav > li > a:focus,
+.main-menu.nav > li > a:hover,
+.main-menu.nav-tabs > li.active > a,
+.main-menu.nav-tabs > li.active > a:focus,
+.main-menu.nav-tabs > li.active > a:hover,
+.main-menu.nav-tabs .active > a,
+.main-menu.nav-tabs a.active,
+.main-menu.nav-tabs a:hover {
+  color: #000000;
+}
+.main-menu.nav-tabs > li > a {
+  color: rgba(0, 0, 0, 0.65);
+}
+.main-menu.nav > li > a:focus,
+.main-menu.nav > li > a:hover,
+.main-menu.nav-tabs > li.active > a,
+.main-menu.nav-tabs > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.main-menu.nav-tabs > li.mm-profile a img {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.13);
+}
+.main-menu.nav-tabs > li.mm-profile a small {
+  color: rgba(0, 0, 0, 0.7);
+}
+.main-menu.nav-tabs > li.mm-profile a small.login_link {
+  color: #2196f3;
+}
+.main-menu.nav-tabs > li.mm-profile a:focus small.login_link,
+.main-menu.nav-tabs > li.mm-profile a:hover small.login_link {
+  color: #51adf6;
+}
+#sidebar li ul a {
+  color: rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 768px) {
+  body.horizontal_menu #sidebar {
+    background: #6574c4;
+  }
+  body.horizontal_menu.inline_menu #sidebar {
+    background: #3f51b5;
+  }
+  body.horizontal_menu #sidebar .nav > li ul {
+    background: #3f51b5;
+  }
+  body.horizontal_menu.inline_menu #sidebar .nav > li ul {
+    background: #3f51b5;
+  }
+  body.horizontal_menu.inline_menu #sidebar .main-menu.nav-tabs > li.active > a {
+    box-shadow: 0 2px 0 0 #ffffff;
+  }
+  body.horizontal_menu.inline_menu header.navbar .header-nav .nav > li.user-link img {
+    border: 2px solid rgba(255, 255, 255, 0.13);
+  }
+  body.horizontal_menu #sidebar a,
+  body.horizontal_menu #sidebar li ul li.active a,
+  body.horizontal_menu #sidebar li ul li.active a,
+  body.horizontal_menu #sidebar li ul a:focus,
+  body.horizontal_menu #sidebar li ul a:hover,
+  body.horizontal_menu .main-menu.nav > li > a:focus,
+  body.horizontal_menu .main-menu.nav > li > a:hover,
+  body.horizontal_menu .main-menu.nav-tabs > li.active > a,
+  body.horizontal_menu .main-menu.nav-tabs > li.active > a:focus,
+  body.horizontal_menu .main-menu.nav-tabs > li.active > a:hover,
+  body.horizontal_menu .main-menu.nav-tabs .active > a,
+  body.horizontal_menu .main-menu.nav-tabs a.active,
+  body.horizontal_menu .main-menu.nav-tabs a:hover {
+    color: #ffffff;
+  }
+  body.horizontal_menu .main-menu.nav-tabs > li > a {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  body.horizontal_menu .main-menu.nav > li > a:focus,
+  body.horizontal_menu .main-menu.nav > li > a:hover,
+  body.horizontal_menu .main-menu.nav-tabs > li.active > a,
+  body.horizontal_menu .main-menu.nav-tabs > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+  body.horizontal_menu .main-menu.nav-tabs > li.mm-profile a img {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.13);
+  }
+  body.horizontal_menu .main-menu.nav-tabs > li.mm-profile a small {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  body.horizontal_menu #sidebar li ul a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+body:not(#login).embeded #content > main > div:not(.quickEdit),
+body:not(#login).embeded #content > main > table {
+  background: transparent;
+}
+.page-loader {
+  background: #3f51b5;
+}
+.page-loader .preloader p {
+  color: #ffffff;
+}
+.preloader .plc-path,
+.plc-path {
+  stroke: #ffffff;
+}
+.btn,
+.btn.focus,
+.btn:focus,
+.btn:hover,
+.btn:active {
+  color: #ffffff;
+  background-color: #ff9800;
+}
+.btn.waves-input-wrapper {
+  color: #ffffff !important;
+  background-color: #ff9800 !important;
+}
+main .dataList table {
+  border-bottom: 2px solid #303f9f;
+}
+main .dataList th,
+main .dataList th a:hover,
+main .dataList th a {
+  color: #ffffff;
+}
+main .footable.breakpoint > tbody > tr > td > span.footable-toggle {
+  color: #3f51b5;
+}
+main .dataList th.sortable:hover {
+  background-color: #3141a3;
+}
+main .dataList thead tr {
+  background-color: rgba(63, 81, 181, 0.8);
+}
+main .dataList tr.odd,
+main .dataList tr.odd + tr.footable-row-detail {
+  background-color: transparent;
+}
+main .dataList tr.tableRowEven,
+main .dataList tr.even,
+main .dataList tr.tableRowEven + tr.footable-row-detail,
+main .dataList tr.even + tr.footable-row-detail {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+main .dataList span.pagelinks a,
+main .dataList span.pagelinks strong,
+main .dataList span.pagelinks > span {
+  color: #2196f3;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+main .dataList span.pagelinks strong {
+  color: #212121;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+main .dataList .pagelinks .pc.first-disabled,
+main .dataList .pagelinks .pc.prev-disabled,
+main .dataList .pagelinks .pc.next-disabled,
+main .dataList .pagelinks .pc.last-disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dataList table a.waves-button {
+  color: #ffffff;
+}
+div[class*="-body-content"] div[class*="-body-header"] {
+  color: #212121;
+}
+main .jqplot-highlighter-tooltip,
+main .jqplot-canvasOverlay-tooltip {
+  color: #000;
+}
+main ::-webkit-input-placeholder {
+  color: #727272;
+}
+main :-moz-placeholder {
+  color: #727272;
+}
+main ::-moz-placeholder {
+  color: #727272;
+}
+main :-ms-input-placeholder {
+  color: #727272;
+}
+main .filter-cell select.emptyValue {
+  color: #727272 !important;
+}
+main input:not([type]),
+main input[type=text],
+main input[type=password],
+main input[type=email],
+main input[type=url],
+main input[type=time],
+main input[type=date],
+main input[type=datetime],
+main input[type=datetime-local],
+main input[type=tel],
+main input[type=number],
+main input[type=search],
+main textarea,
+main select:not([class^=ui]) {
+  color: #212121;
+}
+main input:not([type]):focus:not([readonly]),
+main input[type=text]:focus:not([readonly]),
+main input[type=password]:focus:not([readonly]),
+main input[type=email]:focus:not([readonly]),
+main input[type=url]:focus:not([readonly]),
+main input[type=time]:focus:not([readonly]),
+main input[type=date]:focus:not([readonly]),
+main input[type=datetime]:focus:not([readonly]),
+main input[type=datetime-local]:focus:not([readonly]),
+main input[type=tel]:focus:not([readonly]),
+main input[type=number]:focus:not([readonly]),
+main input[type=search]:focus:not([readonly]),
+main textarea:focus:not([readonly]),
+main select:focus:not([readonly]):not([class^=ui]),
+main input.focus,
+main .ql-container.ql-bubble.focus {
+  border-bottom: 1px solid #3f51b5;
+  box-shadow: 0 1px 0 0 #3f51b5;
+}
+main select:not([class^="ui-"]):not([multiple]) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='undefined' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/%3E%3C/svg%3E");
+}
+main input:-webkit-autofill,
+main textarea:-webkit-autofill,
+main select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: #212121 !important;
+}
+main input:focus:-webkit-autofill,
+main textarea:focus:-webkit-autofill,
+main select:focus:-webkit-autofill {
+  -webkit-box-shadow: 0 1px 0 0 #3f51b5, 0 0 0px 1000px #ffffff inset !important;
+}
+main #form-canvas .label {
+  color: #212121;
+}
+main .subform-container.has-frame .subform-title {
+  background: #fff;
+}
+main .subform-container {
+  border: 2px solid rgba(63, 81, 181, 0.7);
+}
+main .chosen-container-multi .chosen-choices,
+main .chosen-container-single .chosen-single {
+  border-bottom: 1px solid #303f9f;
+  background-color: transparent;
+  background: transparent;
+  color: inherit;
+}
+main .chosen-container-single.chosen-with-drop .chosen-single {
+  color: #000;
+}
+main .chosen-container-multi.chosen-container-active .chosen-choices,
+main .chosen-container-active .chosen-single {
+  border-bottom: 1px solid #3f51b5;
+  box-shadow: 0 1px 0 0 #3f51b5;
+}
+main .multiPagedForm.wizard .page-nav-panel ul,
+main .multiPagedForm.tab .page-nav-panel ul {
+  box-shadow: inset 0 -2px 0 0 #7f8bce;
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button,
+main .multiPagedForm.wizard .page-nav-panel .nav_item button,
+main .multiPagedForm.tab .page-nav-panel .nav_item.current button,
+main .multiPagedForm.tab .page-nav-panel .nav_item button {
+  color: #7f8bce;
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button:disabled,
+main .multiPagedForm.tab .page-nav-panel .nav_item.current button:disabled,
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button,
+main .multiPagedForm.tab .page-nav-panel .nav_item.current button {
+  color: #303f9f;
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current:after,
+main .multiPagedForm.tab .page-nav-panel .nav_item.current:after {
+  background: #303f9f;
+}
+@media (max-width: 767px) {
+  main .multiPagedForm.wizard .page-nav-panel .nav_item button,
+  main .multiPagedForm.tab .page-nav-panel .nav_item button {
+    background: none;
+    border: #7f8bce solid 1px;
+  }
+  main .multiPagedForm.wizard .page-nav-panel .nav_item.current,
+  main .multiPagedForm.tab .page-nav-panel .nav_item.current {
+    border: 1px solid #303f9f;
+    margin-right: 0px;
+  }
+  main .multiPagedForm .page-container {
+    border: 1px solid #303f9f;
+  }
+}
+main .form-cell .grid thead tr,
+main .subform-cell .grid thead tr {
+  background: #999;
+  color: #ffffff;
+}
+main .form-cell .grid tbody tr:nth-child(odd),
+main .subform-cell .grid tbody tr:nth-child(odd) {
+  background-color: #f2f3fa;
+}
+main .form-cell .grid table.tablesaw,
+main .subform-cell .grid table.tablesaw {
+  border-bottom: 1px solid #999;
+}
+main .grid-stack-item .grid-stack-item-header {
+  background: #303f9f;
+}
+main .grid-stack-item .grid-stack-item-header h4 {
+  color: #ffffff;
+}
+main .grid-stack-item .grid-stack-item-content {
+  border-color: transparent;
+}
+body.popupBody #main-body-header {
+  background: #303f9f;
+  color: #ffffff;
+}
+</style><script src="/jw/wro/progressive.min.js" async></script>
+<script>var _enableResponsiveTable = true;</script>
+<script>$(function() {var initPwaUtil = function(){PwaUtil.contextPath = '/jw';PwaUtil.userviewKey = '_';PwaUtil.homePageLink = '/jw/web/userview/PWA/v/_/welcome';PwaUtil.serviceWorkerPath = '/jw/web/userview/PWA/v/_/serviceworker';PwaUtil.subscriptionApiPath = '/jw/web/console/profile/subscription';PwaUtil.pushEnabled = false;PwaUtil.currentUsername = 'roleAnonymous';PwaUtil.onlineNotificationMessage = 'You are now Online';PwaUtil.offlineNotificationMessage = 'You are now Offline';PwaUtil.loginPromptMessage = 'Please login to sync your offline data';PwaUtil.syncingMessage = 'Syncing...';PwaUtil.syncFailedMessage = 'Sync failed';PwaUtil.syncSuccessMessage = 'Sync successful';PwaUtil.isEmbedded = false;PwaUtil.register();PwaUtil.init();};if (typeof PwaUtil !== "undefined") {initPwaUtil();} else { $(document).on("PwaUtil.ready", function(){ initPwaUtil(); });}});</script>
+<script type="text/javascript">
+    
+</script>
+<style type="text/css">
+    
+</style>
+<link rel="shortcut icon" href="/jw/images/favicon_uv.ico" />
+</head>
+<body id="login" class="en_US">
+<div class="page-loader"><div class="preloader pl-xl" style="width:80px"><svg class="pl-circular" viewBox="25 25 50 50"><circle class="plc-path" cx="50" cy="50" r="20" /></svg></div></div>
+<div id="page">
+<header class="navbar">
+<div class="navbar-inner"><div class="container-fluid"><div class="hi-trigger ma-trigger" id="sidebar-trigger"><div class="line-wrap"><div class="line top"></div><div class="line center"></div><div class="line bottom"></div></div></div>
+<div id="header-info" class="inline-block">
+<div id="header-name" class="inline-block">
+<a href="/jw/web/userview/PWA/v/_/welcome" id="header-link" class="brand">
+<span>PWA</span>
+ </a>
+</div>
+<div id="header-description" class="inline-block visible-desktop">
+<span id="description" class="brand"></span>
+</div>
+<div class="clearfix"></div>
+</div>
+<div id="header-message" class="">
+<div id="header-welcome-message" class="">
+<span id="welcomeMessage">Thu, 23 Jul 2020</span>
+</div>
+<div id="header-logout-text" class="">
+<a href="/jw/web/ulogin/PWA/v/_/">
+<span id="loginText">Login</span>
+</a>
+</div>
+<div class="clearfix"></div>
+</div>
+<div id="help-container"></div>
+<div class="nav-no-collapse header-nav"><ul class="nav pull-right">
+<li class=""><a class="btn" href="/jw/home" title="Home"><i class="fa fa-home"></i></a></li>
+</ul></div>
+</div></div>
+</header>
+<div id="main" class="container-fluid-full">
+<div class="row-fluid">
+<div id="content" class="span12">
+<main>
+<form id="loginForm" name="loginForm" action="/jw/j_spring_security_check" method="POST">
+<table align="center">
+<tr><td><label>Username: </label></td><td><input type='text' id='j_username' name='j_username' /></td></tr>
+<tr><td><label>Password: </label></td><td><input type='password' id='j_password' name='j_password' /></td></tr>
+<tr><td>&nbsp;</td><td><input name="submit" class="form-button" type="submit" value="Login" /></td></tr>
+<tr><td colspan="2">
+</td></tr>
+</table>
+</form>
+</main>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<footer class="">
+<div id="footer-message">
+<p><span id="footerMessage">Powered by Joget</span></p>
+</div>
+</footer>
+</div>
+<script type="text/javascript">
+            HelpGuide.base = "/jw"
+            HelpGuide.attachTo = "#help-container";
+            HelpGuide.key = "help.web.userview.PWA..login";
+            $(window).on('load', function() {
+                setTimeout(function() {                    HelpGuide.show();
+                }, 0);            });
+        </script>
+<script src="/jw/csrf"></script>
+<style>
+    
+    </style>
+</body>
+</html>
+
